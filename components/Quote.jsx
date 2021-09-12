@@ -1,28 +1,22 @@
-import { useEffect, useState } from "react";
-import quotes from "../api/quotes";
 import { TextBlock } from "./ui/TextBlock";
 import styles from "./Quote.module.css";
 
-export default function Quote(props) {
-    const [quote, setQuote] = useState(null)
-    useEffect(() => {
-        fetch(quotes.random)
-            .then(res => res.json())
-            .then(quote => setQuote(quote))
-    }, [])
+export default function Quote({quoteData, refetch}) {
 
     return (
         <div className={styles.quote}>
 
-            {quote &&
+            {quoteData &&
                 <div className={styles.quote__container}>
                     <div className={styles.quote__text}>
                     <TextBlock>
-                        "{quote.content}"
+                        "{quoteData?.content}"
                     </TextBlock>
-                    <h3 className="h5">{quote.author}</h3>                    
+                    <h3 className="h5">{quoteData?.author}</h3>                    
                     </div>
-                    <img src="/assets/icons/icon-refresh.svg" alt="Refresh"/>
+                    <button onClick={refetch} className={styles.quote__refreshbutton}>
+                        <img src="/assets/icons/icon-refresh.svg" alt="Refresh"/>
+                    </button>
                 </div>
             }
         </div>

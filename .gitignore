@@ -34,8 +34,9 @@ yarn-error.log*
 # vercel
 .vercel
 
-# Direnv package config file 
+# Local environment variables 
 .envrc
+.env.local
 
 # FEM Design assets 
 /figma/

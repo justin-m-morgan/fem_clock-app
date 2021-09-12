@@ -1,6 +1,9 @@
 import Head from "next/head"
 
-import { useState } from 'react'
+import { useQuery} from "react-query"
+import { getLocation } from "../api/freegeoip"
+import { getTime } from "../api/worldtime"
+import { getRandomQuote } from "../api/quotes"
 import { Background } from "../components/Background"
 import CurrentTimeZone from "../components/CurrentTimeZone"
 import DayOfWeek from "../components/DayOfWeek"
@@ -13,24 +16,19 @@ import MorePanel from "../components/MorePanel"
 import PrimaryPanel from "../components/PrimaryPanel"
 import Quote from "../components/Quote"
 import Time from "../components/Time"
-import { TextBlock } from "../components/ui/TextBlock"
 import WeekNumber from "../components/WeekNumber"
 
-export default function Home({ book }) {
-  const [worldTime, setWorldTime] = useState(null)
-
-  const handleGetWorldTime = () => {
-    // Client-side request are mocked by `mocks/browser.js`.
-    fetch("http://worldtimeapi.org/api/ip")
-      .then((res) => res.json())
-      .then(setWorldTime)
-  }
+export default function Home(props) {
+  const { data: timeData } = useQuery('time', getTime, {refetchInterval: (60 * 1000)}) 
+  const { data: locationData } = useQuery('location', getLocation, {refetchInterval: (15 * 60 * 1000)}) 
+  const { data: quoteData, refetch} = useQuery('quote', getRandomQuote, {refetchInterval: (3 * 60 * 1000)})
 
   return (
+    
     <Background>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;500;800&display=swap" rel="stylesheet" />
 
         <title>FEM Clock</title>
@@ -40,12 +38,11 @@ export default function Home({ book }) {
       </Head>
 
       <PrimaryPanel>
-        <Quote />
-
+        <Quote quoteData={quoteData} refetch={refetch} />
         <LowerPortion>
-          <Greeting />
-          <Time />
-          <Location />
+          <Greeting datetime={timeData?.datetime}/>
+          <Time datetime={timeData?.datetime} abbreviation={timeData?.abbreviation}/>
+          <Location city={locationData?.city} region_code={locationData?.region_code} />
         </LowerPortion>
         <MoreButton />
       </PrimaryPanel>
@@ -56,6 +53,6 @@ export default function Home({ book }) {
         <WeekNumber />
       </MorePanel>
     </Background>
-
+    
   )
 }

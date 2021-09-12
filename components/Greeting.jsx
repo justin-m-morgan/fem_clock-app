@@ -1,9 +1,9 @@
 import classnames from "classnames"
-import { useState } from "react"
+import { parseDateString } from "../data/datetimes"
 import styles from "./Greeting.module.css"
 
-export default function Greeting(props) {
-    const [timeOfDay, setTimeOfDay] = useState("morning")
+export default function Greeting({datetime}) {
+    
 
     return (
         <div className={styles.container}>
@@ -11,14 +11,21 @@ export default function Greeting(props) {
             <h4 className={classnames(
                 "h6",
                 styles.text
-            )}>{greeting(timeOfDay)}</h4>
+            )}>{greeting(datetime)}</h4>
         </div>
     )    
 }
 
-function greeting(timeOfDay) {
-    return {
-        morning: "Good Morning",
-        evening: "Good Evening",
-    }[timeOfDay] || "Good Day"
+function greeting(datetime) {
+    let date = parseDateString(datetime)
+
+    if (date instanceof Date) {
+        let hour = date.getHours()
+        if (hour < 12) return "Good Morning"
+        else if (hour >= 12 && hour <=18) return "Good Afternoon"
+        else if (hour >= 18 ) return "Good Eventing"
+    }
+    
+    return "Good Day"
+    
 }

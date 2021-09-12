@@ -1,38 +1,209 @@
-[
+{
+  "count": 20,
+  "totalCount": 1885,
+  "page": 1,
+  "totalPages": 95,
+  "lastItemIndex": 20,
+  "results": [
     {
-        "_id": "ff8I--Yqxowc",
-        "tags": [
-            "famous-quotes"
-        ],
-        "content": "The noblest worship is to make yourself as good and as just as you can.",
-        "author": "Isocrates",
-        "authorSlug": "isocrates",
-        "length": 71,
-        "dateAdded": "2020-09-29",
-        "dateModified": "2020-09-29"
+      "tags": ["famous-quotes", "inspirational"],
+      "_id": "2xpHvSOQMD",
+      "author": "Helmut Schmidt",
+      "content": "The biggest room in the world is room for improvement.",
+      "authorSlug": "helmut-schmidt",
+      "length": 54,
+      "dateAdded": "2021-06-18",
+      "dateModified": "2021-06-18"
     },
     {
-        "_id": "M1DjUqEQCO-E",
-        "tags": [
-            "famous-quotes"
-        ],
-        "content": "Never bend your head. Always hold it high. Look the world right in the eye.",
-        "author": "Helen Keller",
-        "authorSlug": "helen-keller",
-        "length": 75,
-        "dateAdded": "2020-03-15",
-        "dateModified": "2020-03-15"
+      "tags": ["famous-quotes", "inspirational"],
+      "_id": "HMBEfGB94i",
+      "author": "Henry Ford",
+      "content": "Whether you think you can or you think you can't, you are right.",
+      "authorSlug": "henry-ford",
+      "length": 64,
+      "dateAdded": "2021-06-18",
+      "dateModified": "2021-06-18"
     },
     {
-        "_id": "ZR3wECF-tFj",
-        "tags": [
-            "famous-quotes"
-        ],
-        "content": "He is able who thinks he is able.",
-        "author": "Buddha",
-        "authorSlug": "buddha",
-        "length": 33,
-        "dateAdded": "2019-10-03",
-        "dateModified": "2019-10-03"
+      "tags": ["famous-quotes", "inspirational"],
+      "_id": "lJ60rOYWci",
+      "author": "Neil Gaiman",
+      "content": "The one thing that you have that nobody else has is you. Your voice, your mind, your story, your vision. So write and draw and build and play and dance and live as only you can.",
+      "authorSlug": "neil-gaiman",
+      "length": 177,
+      "dateAdded": "2021-06-18",
+      "dateModified": "2021-06-18"
+    },
+    {
+      "tags": ["famous-quotes", "inspirational"],
+      "_id": "XNLGqepInX",
+      "author": "Amy Poehler",
+      "content": "There’s power in looking silly and not caring that you do.",
+      "authorSlug": "amy-poehler",
+      "length": 58,
+      "dateAdded": "2021-06-18",
+      "dateModified": "2021-06-18"
+    },
+    {
+      "tags": ["famous-quotes", "inspirational"],
+      "_id": "aEPNVog6sT",
+      "author": "Eric Hoffer",
+      "content": "In times of change, learners inherit the earth, while the learned find themselves beautifully equipped to deal with a world that no longer exists.",
+      "authorSlug": "eric-hoffer",
+      "length": 146,
+      "dateAdded": "2021-06-18",
+      "dateModified": "2021-06-18"
+    },
+    {
+      "tags": ["famous-quotes", "inspirational"],
+      "_id": "QdK00IhCNX",
+      "author": "Larry Page",
+      "content": "If you're changing the world, you're working on important things. You're excited to get up in the morning.",
+      "authorSlug": "larry-page",
+      "length": 106,
+      "dateAdded": "2021-06-18",
+      "dateModified": "2021-06-18"
+    },
+    {
+      "tags": ["wisdom"],
+      "_id": "96eV21NlZKJ",
+      "content": "Make it your habit not to be critical about small things.",
+      "author": "Edward Everett Hale",
+      "authorSlug": "edward-everett-hale",
+      "length": 57,
+      "dateAdded": "2021-05-12",
+      "dateModified": "2021-05-12"
+    },
+    {
+      "tags": ["famous-quotes"],
+      "_id": "2xx4dfKrYVRf",
+      "content": "Some people thrive on huge, dramatic change. Some people prefer the slow and steady route. Do what's right for you.",
+      "author": "Julie Morgenstern",
+      "authorSlug": "julie-morgenstern",
+      "length": 115,
+      "dateAdded": "2021-05-12",
+      "dateModified": "2021-05-12"
+    },
+    {
+      "tags": ["wisdom"],
+      "_id": "wEfrviG0x9r",
+      "content": "With age comes wisdom and a high sex drive. And the wisdom to enjoy it.",
+      "author": "Amber Valletta",
+      "authorSlug": "amber-valletta",
+      "length": 71,
+      "dateAdded": "2021-05-12",
+      "dateModified": "2021-05-12"
+    },
+    {
+      "tags": ["famous-quotes"],
+      "_id": "6c2h-AtqMj6d",
+      "content": "You can stand tall without standing on someone. You can be a victor without having victims.",
+      "author": "Harriet Woods",
+      "authorSlug": "harriet-woods",
+      "length": 91,
+      "dateAdded": "2021-05-12",
+      "dateModified": "2021-05-12"
+    },
+    {
+      "tags": ["famous-quotes"],
+      "_id": "CdL1z3NLSDrN",
+      "content": "Don't talk about what you have done or what you are going to do.",
+      "author": "Thomas Jefferson",
+      "authorSlug": "thomas-jefferson",
+      "length": 64,
+      "dateAdded": "2021-05-12",
+      "dateModified": "2021-05-12"
+    },
+    {
+      "tags": ["wisdom"],
+      "_id": "l7UNABW6dA2",
+      "content": "Silence is the sleep that nourishes wisdom.",
+      "author": "Francis Bacon",
+      "authorSlug": "francis-bacon",
+      "length": 43,
+      "dateAdded": "2021-05-12",
+      "dateModified": "2021-05-12"
+    },
+    {
+      "tags": ["friendship"],
+      "_id": "sTma0kWPt2",
+      "content": "Friendship, like credit, is highest when it is not used.",
+      "author": "Elbert Hubbard",
+      "authorSlug": "elbert-hubbard",
+      "length": 56,
+      "dateAdded": "2021-05-12",
+      "dateModified": "2021-05-12"
+    },
+    {
+      "tags": ["friendship"],
+      "_id": "ARKzsqVpFY",
+      "content": "Two persons cannot long be friends if they cannot forgive each other's little failings.",
+      "author": "Jean de La Bruyère",
+      "authorSlug": "jean-de-la-bruyere",
+      "length": 87,
+      "dateAdded": "2021-05-12",
+      "dateModified": "2021-05-12"
+    },
+    {
+      "tags": ["wisdom"],
+      "_id": "5syS8jEn8m",
+      "content": "When a thing is done, it's done. Don't look back. Look forward to your next objective.",
+      "author": "George Marshall",
+      "authorSlug": "george-marshall",
+      "length": 86,
+      "dateAdded": "2021-05-12",
+      "dateModified": "2021-05-12"
+    },
+    {
+      "tags": ["famous-quotes"],
+      "_id": "bfpxfIQlqZ_3",
+      "content": "He who controls others may be powerful, but he who has mastered himself is mightier still.",
+      "author": "Laozi",
+      "authorSlug": "laozi",
+      "length": 90,
+      "dateAdded": "2021-05-12",
+      "dateModified": "2021-05-12"
+    },
+    {
+      "tags": ["wisdom"],
+      "_id": "6Kl3UT6ULk",
+      "content": "Wisdom, compassion, and courage are the three universally recognized moral qualities of men.",
+      "author": "Confucius",
+      "authorSlug": "confucius",
+      "length": 92,
+      "dateAdded": "2021-05-12",
+      "dateModified": "2021-05-12"
+    },
+    {
+      "tags": ["famous-quotes"],
+      "_id": "Oh-e1-oygRPX",
+      "content": "To be wronged is nothing unless you continue to remember it.",
+      "author": "Confucius",
+      "authorSlug": "confucius",
+      "length": 60,
+      "dateAdded": "2021-05-12",
+      "dateModified": "2021-05-12"
+    },
+    {
+      "tags": ["famous-quotes"],
+      "_id": "2wYjTZiTUSgQ",
+      "content": "The things that one most wants to do are the things that are probably most worth doing.",
+      "author": "Winifred Holtby",
+      "authorSlug": "winifred-holtby",
+      "length": 87,
+      "dateAdded": "2021-05-12",
+      "dateModified": "2021-05-12"
+    },
+    {
+      "tags": ["friendship"],
+      "_id": "4mPxqSvuiN",
+      "content": "Friendship increases in visiting friends, but in visiting them seldom.",
+      "author": "Francis Bacon",
+      "authorSlug": "francis-bacon",
+      "length": 70,
+      "dateAdded": "2021-05-12",
+      "dateModified": "2021-05-12"
     }
-]
+  ]
+}

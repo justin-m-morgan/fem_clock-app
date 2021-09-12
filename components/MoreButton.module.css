@@ -7,8 +7,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0.1rem 0.13rem;
     border-radius: 32px;
     color: var(--color__grey);
+    background-color: var(--color__white);
+}
+
+.button > img {
+    transform: rotate(180deg) scale(0.92);
+    transform-origin: center;
 }
 
 .text {
@@ -19,4 +26,5 @@
     font-size: 0.75rem;
     line-height: 0.875rem;
     letter-spacing: 0.234rem;
+    font-weight: 800;
 }

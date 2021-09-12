@@ -1,19 +1,18 @@
 import classNames from "classnames"
-import { useState } from "react"
 import styles from "./Location.module.css"
 
-export default function Location(props) {
-    const [location, setLocation] = useState(false)
+export default function Location({city, region_code}) {
+    
     return (
         <div className={classNames(
             "h4",
             styles.container
         )}>
-            {locationDisplay(location)}
+            {locationDisplay(city, region_code)}
         </div>
     )  
 }
 
-function locationDisplay(location) {
-    return location ? `In ${location}` : "Looking you up"
+function locationDisplay(city, region_code) {
+    return city ? `In ${city}, ${region_code}` : "Looking you up"
 }

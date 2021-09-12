@@ -5,13 +5,17 @@
 .quote__container {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     max-width: 40ch;
-}
-.quote__container > img {
-    width: 16px;
-    height: 16px;
 }
 
 .quote__text > *:first-child {
     padding-bottom: 0.375rem;
+}
+
+.quote__refreshbutton {
+    flex: 0 0 24px;
+}
+.quote__refreshbutton:hover > img {
+    color: green;
 }
