@@ -3,3 +3,10 @@
     gap: .8rem;
     padding-bottom: 2.75rem;
 }
+
+@media (min-width: 900px) {
+    .container {
+        padding-bottom: 0;
+    }
+    
+}

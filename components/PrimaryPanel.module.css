@@ -3,8 +3,17 @@
     flex-direction: column;
     justify-content: flex-end; 
     flex-grow: 1;
+    padding: 2rem;
 }
 
 .container > *:first-child {
     margin: 0 0 auto 0
+}
+
+@media (min-width: 900px) {
+    .container {
+        padding: 2rem 4rem;
+        width: 900px;
+        margin: 0 auto;
+    }
 }

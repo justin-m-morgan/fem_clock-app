@@ -3,3 +3,11 @@
     line-height: 1.375rem;
     color: rgba(255, 255, 255, 0.7);
 }
+
+@media (min-width: 450px) {
+  .textBlock {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}

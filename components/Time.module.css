@@ -1,7 +1,60 @@
-.time {
-
+.container {
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 3rem;
 }
+
+.time {
+  display: flex;
+  align-items: flex-end;
+}
+
+.timetext {
+  font-size: 6.25rem;
+}
+
 .timezone {
-    margin-left: 1rem;
-    font-weight: 200;
+  margin-left: 0.4rem;
+  font-weight: 200;
+}
+
+.greeting__container {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.greeting__text {
+  text-transform: uppercase;
+}
+
+.hidesm {
+  display: none;
+}
+
+.location__container {
+  font-size: 0.9375rem;
+  letter-spacing: 0.1875rem;
+}
+
+@media (min-width: 450px) {
+  .container{
+    gap: 0.5rem;
+  }
+  .timetext {
+    font-size: clamp(6.25rem, 7rem, 12.5rem);
+  }
+  .timezone {
+    font-size: 2.5rem;
+  }
+
+  .hidesm {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    padding-bottom: 0;
+  }
 }

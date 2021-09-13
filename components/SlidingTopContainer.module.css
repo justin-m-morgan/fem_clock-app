@@ -1,0 +1,12 @@
+.container {
+
+}
+
+@media (min-width: 900px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        
+    }
+}

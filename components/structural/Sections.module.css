@@ -1,0 +1,29 @@
+.topthird__container {
+  height: 33vh;
+}
+.midthird__container {
+  height: 67vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.bottomthird__container {
+  height: 33vh;
+}
+
+@media (min-width: 1000px) {
+  .topthird__container {
+    height: 50vh;
+  }
+  .midthird__container {
+    height: 50vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 6.125rem;
+  }
+  .bottomthird__container {
+    height: 50vh;
+  }
+}
+

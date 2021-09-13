@@ -7,6 +7,7 @@
     justify-content: space-between;
     align-items: flex-start;
     max-width: 40ch;
+    padding: 2rem 0rem;
 }
 
 .quote__text > *:first-child {
@@ -18,4 +19,21 @@
 }
 .quote__refreshbutton:hover > img {
     color: green;
+}
+
+@media (min-width: 450px) {
+  .quote__container {
+    max-width: 38.75rem;
+  }
+  .quote__refreshbutton {
+    flex: 0 0 32px;
+}
+.quote__text > *:first-child {
+  padding-bottom: 0.8125rem;
+}
+}
+@media (min-width: 1000px) {
+  .quote__container {
+    padding-top: 3.5rem;
+  }
 }

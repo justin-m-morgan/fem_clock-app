@@ -1,0 +1,8 @@
+.base {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.fade {
+    opacity: 0;
+}
