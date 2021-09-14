@@ -25,9 +25,21 @@ export default function Home(props) {
 
   const { data: timeData } = useQuery("time", getTime, {
     refetchInterval: 60 * 1000,
+    initialData: {
+      datetime: false,
+      abbreviation: false,
+      timezone: false,
+      day_of_week: false,
+      day_of_year: false,
+      week_number: false,
+    },
   });
   const { data: locationData } = useQuery("location", getLocation, {
     refetchInterval: 15 * 60 * 1000,
+    initialData: {
+      city: false,
+      region_code: false,
+    },
   });
   const { data: quoteData, refetch } = useQuery("quote", getRandomQuote, {
     refetchInterval: 3 * 60 * 1000,
