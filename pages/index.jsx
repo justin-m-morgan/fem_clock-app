@@ -9,7 +9,6 @@ import FadeIf from "../components/interactions/FadeIf";
 import SlideUpIf from "../components/interactions/SlideUpIf";
 import MoreButton from "../components/MoreButton";
 import MorePanel from "../components/MorePanel";
-import PrimaryPanel from "../components/PrimaryPanel";
 import Quote from "../components/Quote";
 import Time from "../components/Time";
 import MaxWidth from "../components/structural/MaxWidth";
@@ -19,25 +18,25 @@ import {
   BottomThird,
 } from "../components/structural/Sections";
 import { Glassy } from "../components/ui/Glassy";
+import { isNight, parseDateString } from "../data/datetimes";
 
 export default function Home(props) {
   const [morePanelShowing, setMorePanelShowing] = useState(false);
 
   const { data: timeData } = useQuery("time", getTime, {
     refetchInterval: 60 * 1000,
-    initialData: {},
   });
   const { data: locationData } = useQuery("location", getLocation, {
     refetchInterval: 15 * 60 * 1000,
-    initialData: {},
   });
   const { data: quoteData, refetch } = useQuery("quote", getRandomQuote, {
     refetchInterval: 3 * 60 * 1000,
-    initialData: {},
   });
 
+  const isNightToggle = isNight(parseDateString(timeData.datetime));
+
   return (
-    <Background>
+    <Background isNight={isNightToggle}>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -69,6 +68,7 @@ export default function Home(props) {
               abbreviation={timeData.abbreviation}
               city={locationData.city}
               region={locationData.region_code}
+              isNight={isNightToggle}
             />
             <MoreButton
               morePanelShowing={morePanelShowing}
@@ -80,13 +80,14 @@ export default function Home(props) {
         </MaxWidth>
 
         <BottomThird>
-          <Glassy>
+          <Glassy isNight={isNightToggle}>
             <MaxWidth>
               <MorePanel
                 timezone={timeData.timezone}
                 day_of_year={timeData.day_of_year}
                 day_of_week={timeData.day_of_week}
                 week_number={timeData.week_number}
+                isNight={isNightToggle}
               />
             </MaxWidth>
           </Glassy>

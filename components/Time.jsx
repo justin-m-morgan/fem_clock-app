@@ -2,10 +2,19 @@ import classNames from "classnames";
 import { parseDateString } from "../data/datetimes";
 import styles from "./Time.module.css";
 
-export default function TimeDisplay({ datetime, abbreviation, city, region }) {
+const dayIconUrl = "./assets/icons/icon-sun.svg";
+const nightIconUrl = "./assets/icons/icon-moon.svg";
+
+export default function TimeDisplay({
+  datetime,
+  abbreviation,
+  city,
+  region,
+  isNight,
+}) {
   return (
     <div className={styles.container}>
-      <Greeting datetime={datetime} />
+      <Greeting datetime={datetime} isNight={isNight} />
       <Time datetime={datetime} abbreviation={abbreviation} />
       <Location city={city} region={region} />
     </div>
@@ -29,16 +38,26 @@ function AbbreviatedTZ({ abbreviation }) {
   );
 }
 
-function Greeting({ datetime }) {
+function Greeting({ datetime, isNight }) {
   return (
     <div className={styles.greeting__container}>
-      <img src="./assets/icons/icon-sun.svg" alt="Sun" />
+      <img
+        src={isNightImageSrcToggle(isNight)}
+        alt={isNightImageAltToggle(isNight)}
+      />
       <h4 className={styles.greeting__text}>
         {greeting(datetime)}
         <span className={styles.greeting__text__hide}>, It's Currently</span>
       </h4>
     </div>
   );
+}
+
+function isNightImageSrcToggle(isNight) {
+  return isNight ? nightIconUrl : dayIconUrl;
+}
+function isNightImageAltToggle(isNight) {
+  return isNight ? "Moon" : "Sun";
 }
 
 function Location({ city, region }) {

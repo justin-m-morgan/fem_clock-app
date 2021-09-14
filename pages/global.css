@@ -5,15 +5,9 @@
     --color__black: rgb(0, 0, 0);
     --color__grey: rgb(48,48,48);
     --color__white: rgb(255, 255, 255);
-    --bg-desktop__daytime: url('/assets/desktop/bg-image-daytime.jpg');
-    --bg-desktop__nighttime: url('/assets/desktop/bg-image-daytime.jpg');
-    --bg-mobile__daytime: url('/assets/mobile/bg-image-daytime.jpg');
-    --bg-mobile__nighttime: url('/assets/mobile/bg-image-daytime.jpg');
-    --bg-tablet__daytime: url('/assets/tablet/bg-image-daytime.jpg');
-    --bg-tablet__nighttime: url('/assets/tablet/bg-image-daytime.jpg');
     --icon-arrow-up: url('/assets/icons/icon-arrow-up.svg');
-    --icon-moon: url('/assets/icons/icon-moon.svg');
     --icon-refresh: url('/assets/icons/icon-refresh.svg');
+    --icon-moon: url('/assets/icons/icon-moon.svg');
     --icon-sun: url('/assets/icons/icon-sun.svg');
 }
 

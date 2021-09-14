@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import styles from "./MorePanel.module.css";
 
 export default function MorePanel({
@@ -5,9 +6,12 @@ export default function MorePanel({
   day_of_year,
   day_of_week,
   week_number,
+  isNight,
 }) {
   return (
-    <div className={styles.container}>
+    <div
+      className={classNames(styles.container, { [`${styles.night}`]: isNight })}
+    >
       <dl className={styles.datalist}>
         <div className={styles.datalist__itemcontainer}>
           <dt>Current Timezone</dt>

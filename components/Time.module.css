@@ -10,8 +10,7 @@
 }
 
 .timetext {
-  /* font-size: 4rem; */
-  font-weight: 800;
+    font-weight: 800;
     font-size: clamp(3rem, 25vw, 6.25rem);
     line-height: 6.25rem;
     letter-spacing: -0.156rem;
@@ -51,14 +50,14 @@
   }
   .timetext {
     font-size: clamp(6.25rem, 25vw, 12.5rem);
-    line-height: 10.5rem;
+    line-height: 0.8;
     letter-spacing: -0.31rem;
+    padding-top: 1.5rem;
   }
   .timezone {
     font-size: 2.5rem;
   }
   .greeting__text {
-
       font-size: 0.9375rem;
       line-height: 1.75rem;
       letter-spacing: 0.1875rem;
@@ -80,7 +79,7 @@
 
   .timetext {
     font-size: clamp(8rem, 16vw, 12.5rem);
-    line-height: 12.5rem;
+    line-height: clamp(7rem, 15vw, 10rem);
     letter-spacing: -0.31rem;
 }
   .greeting__text {
