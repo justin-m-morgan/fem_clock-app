@@ -3,9 +3,10 @@
 }
 
 .quote__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 32px;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items:start;
     max-width: 40ch;
     padding: 2rem 0rem;
 }
@@ -23,6 +24,7 @@
 @media (min-width: 450px) {
   .quote__container {
     max-width: 38.75rem;
+    grid-template-columns: 1fr 48px;
   }
   .quote__refreshbutton > svg, .quote__refreshbutton > img {
     width: 32px;
