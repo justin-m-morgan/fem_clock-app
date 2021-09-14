@@ -18,6 +18,7 @@ import {
   MidThird,
   BottomThird,
 } from "../components/structural/Sections";
+import { Glassy } from "../components/ui/Glassy";
 
 export default function Home(props) {
   const [morePanelShowing, setMorePanelShowing] = useState(false);
@@ -52,34 +53,45 @@ export default function Home(props) {
         <title>FEM Clock</title>
         <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" />
       </Head>
-      <MaxWidth>
-        <TopThird>
+
+      <TopThird>
+        <MaxWidth>
           <FadeIf predicate={morePanelShowing}>
             <Quote quoteData={quoteData} refetch={refetch} />
           </FadeIf>
-        </TopThird>
+        </MaxWidth>
+      </TopThird>
+      <SlideUpIf predicate={morePanelShowing}>
+        <MaxWidth>
+          <MidThird>
+            <Time
+              datetime={timeData.datetime}
+              abbreviation={timeData.abbreviation}
+              city={locationData.city}
+              region={locationData.region_code}
+            />
+            <MoreButton
+              morePanelShowing={morePanelShowing}
+              toggleMorePanelShowing={toggleMorePanelShowing(
+                setMorePanelShowing
+              )}
+            />
+          </MidThird>
+        </MaxWidth>
 
-        <MidThird>
-          <Time
-            datetime={timeData.datetime}
-            abbreviation={timeData.abbreviation}
-            city={locationData.city}
-            region={locationData.region_code}
-          />
-          <MoreButton
-            morePanelShowing={morePanelShowing}
-            toggleMorePanelShowing={toggleMorePanelShowing(setMorePanelShowing)}
-          />
-        </MidThird>
         <BottomThird>
-          <MorePanel
-            timezone={timeData.timezone}
-            day_of_year={timeData.day_of_year}
-            day_of_week={timeData.day_of_week}
-            week_number={timeData.week_number}
-          />
+          <Glassy>
+            <MaxWidth>
+              <MorePanel
+                timezone={timeData.timezone}
+                day_of_year={timeData.day_of_year}
+                day_of_week={timeData.day_of_week}
+                week_number={timeData.week_number}
+              />
+            </MaxWidth>
+          </Glassy>
         </BottomThird>
-      </MaxWidth>
+      </SlideUpIf>
     </Background>
   );
 }

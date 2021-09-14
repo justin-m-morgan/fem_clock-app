@@ -33,9 +33,9 @@ function Greeting({ datetime }) {
   return (
     <div className={styles.greeting__container}>
       <img src="./assets/icons/icon-sun.svg" alt="Sun" />
-      <h4 className={classNames("h6", styles.greeting__text)}>
+      <h4 className={styles.greeting__text}>
         {greeting(datetime)}
-        <span className={styles.hidesm}>, It's Currently</span>
+        <span className={styles.greeting__text__hide}>, It's Currently</span>
       </h4>
     </div>
   );

@@ -1,29 +1,23 @@
 .background {
   width: 100vw;
   height: 100vh;
-  background: var(--bg-mobile__daytime);
+  background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--bg-mobile__daytime);
   background-size: cover;
   background-position: center;
   position: relative;
-  z-index: -2;
+  overflow:hidden;
 }
-.background::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: -1;
-}
+
+
 
 @media (min-width: 450px) {
   .background {
-
-    background-image: var(--bg-tablet__daytime);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--bg-tablet__daytime);
   }
 }
 
 @media (min-width: 900px) {
   .background {
-    background-image: var(--bg-desktop__daytime);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), var(--bg-desktop__daytime);
   }
 }

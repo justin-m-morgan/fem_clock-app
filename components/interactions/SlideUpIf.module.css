@@ -1,39 +1,17 @@
 .base {
     transition: transform 500ms;
-    transform: translateY(70%);
+    transform: translateY(0);
 }
 
 .slide {
-    transform: translateY(-20%);
+    transform: translateY(-33vh);
 }
 
 
-@media (min-width: 450px) {
-    .base {
-        transform: translateY(130%);
-    }
 
-    .slide {
-        transform: translateY(0%);
-    }
-}
 
 @media (min-width: 900px) {
-    .base {
-        transform: translateY(120%);
-    }
-
     .slide {
-        transform: translateY(-20%);
-    }
-}
-
-@media (min-height: 840px) {
-    .base {
-        transform: translateY(100%);
-    }
-
-    .slide {
-        transform: translateY(10%);
+        transform: translateY(-45vh);
     }
 }

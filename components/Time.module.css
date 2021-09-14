@@ -10,7 +10,11 @@
 }
 
 .timetext {
-  font-size: 6.25rem;
+  /* font-size: 4rem; */
+  font-weight: 800;
+    font-size: clamp(3rem, 25vw, 6.25rem);
+    line-height: 6.25rem;
+    letter-spacing: -0.156rem;
 }
 
 .timezone {
@@ -26,9 +30,13 @@
 
 .greeting__text {
   text-transform: uppercase;
+  font-weight: 200;
+    font-size: 0.9375rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.1875rem;
 }
 
-.hidesm {
+.greeting__text__hide {
   display: none;
 }
 
@@ -42,13 +50,25 @@
     gap: 0.5rem;
   }
   .timetext {
-    font-size: clamp(6.25rem, 7rem, 12.5rem);
+    font-size: clamp(6.25rem, 25vw, 12.5rem);
+    line-height: 10.5rem;
+    letter-spacing: -0.31rem;
   }
   .timezone {
     font-size: 2.5rem;
   }
+  .greeting__text {
 
-  .hidesm {
+      font-size: 0.9375rem;
+      line-height: 1.75rem;
+      letter-spacing: 0.1875rem;
+
+  }
+
+}
+
+@media (min-width: 600px) {
+  .greeting__text__hide {
     display: inline-block;
   }
 }
@@ -57,4 +77,15 @@
   .container {
     padding-bottom: 0;
   }
+
+  .timetext {
+    font-size: clamp(8rem, 16vw, 12.5rem);
+    line-height: 12.5rem;
+    letter-spacing: -0.31rem;
+}
+  .greeting__text {
+    font-size: 0.9375rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.1875rem;
+}
 }
