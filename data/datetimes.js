@@ -1,6 +1,10 @@
 
 export function parseDateString(datetime){
-    return new Date(Date.parse(datetime))
+    let date = new Date(datetime);
+    if (date instanceof Date) {
+      return date;
+    }
+    return false;
 }
 
 export function isNight(date) {

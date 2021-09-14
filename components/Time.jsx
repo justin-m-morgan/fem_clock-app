@@ -74,16 +74,17 @@ function locationDisplay(city, region) {
 
 function formatTime(datetime) {
   let date = parseDateString(datetime);
-  let hours = date.getHours();
-  let minutes = date.getMinutes() == 0 ? "00" : date.getMinutes();
-
-  hours = Number.isNaN(hours) ? "--" : hours;
-  minutes = Number.isNaN(minutes) ? "--" : minutes;
 
   if (date instanceof Date) {
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+
+    if (minutes < 10) minutes = `${minutes}`.padStart(2, "0");
+
     return `${hours}:${minutes}`;
   }
-  return `12:00`;
+
+  return `--:--`;
 }
 
 function greeting(datetime) {
