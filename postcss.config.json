@@ -1,6 +1,6 @@
 {
   "plugins": [
-    "postcss-100vh-fix",
+    "postcss-viewport-height-correction",
     "postcss-flexbugs-fixes",
     [
       "postcss-preset-env",
