@@ -18,8 +18,9 @@
     width: 24px;
     height: 24px;
 }
-.quote__refreshbutton:hover > img {
-    color: green;
+.quote__refreshbutton> img {
+    width: 100%;
+    height: 100%;
 }
 
 @media (min-width: 450px) {
