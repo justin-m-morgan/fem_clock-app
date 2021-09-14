@@ -1,9 +1,9 @@
-const root_url = "http://worldtimeapi.org/api/ip"
+const root_url = "https://worldtimeapi.org/api/ip/";
 
 export default {
-    root: root_url
-}
+  root: root_url,
+};
 
 export function getTime() {
-    return fetch(root_url).then(res => res.json())
+  return fetch(root_url).then((res) => res.json());
 }
