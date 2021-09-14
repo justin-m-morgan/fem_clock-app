@@ -77,6 +77,9 @@ function formatTime(datetime) {
   let hours = date.getHours();
   let minutes = date.getMinutes() == 0 ? "00" : date.getMinutes();
 
+  hours = Number.isNaN(hours) ? "--" : hours;
+  minutes = Number.isNaN(minutes) ? "--" : minutes;
+
   if (date instanceof Date) {
     return `${hours}:${minutes}`;
   }
