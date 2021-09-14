@@ -15,7 +15,8 @@
 }
 
 .quote__refreshbutton {
-    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
 }
 .quote__refreshbutton:hover > img {
     color: green;
