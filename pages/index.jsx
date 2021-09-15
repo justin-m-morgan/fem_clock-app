@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { getLocation } from "../api/freegeoip";
 import { getTime } from "../api/worldtime";
@@ -18,11 +18,11 @@ import {
   BottomThird,
 } from "../components/structural/Sections";
 import { Glassy } from "../components/ui/Glassy";
-import { isNight, parseDateString } from "../data/datetimes";
-
+import { isNightCheck, parseDateString } from "../data/datetimes";
 
 export default function Home(props) {
   const [morePanelShowing, setMorePanelShowing] = useState(false);
+  const [isNight, setIsNight] = useState(false);
 
   const { data: timeData } = useQuery("time", getTime, {
     refetchInterval: 60 * 1000,
@@ -46,11 +46,15 @@ export default function Home(props) {
     refetchInterval: 3 * 60 * 1000,
   });
 
-  const isNightToggle = isNight(parseDateString(timeData.datetime));
+  useEffect(() => {
+    isNightCheck(parseDateString(timeData.datetime))
+      ? setIsNight(true)
+      : setIsNight(false);
+  }, [timeData]);
 
   return (
-    <div data-theme={isNightToggle ? "dark" : "light"}>
-      <Background isNight={isNightToggle}>
+    <div data-theme={isNight ? "dark" : "light"}>
+      <Background isNight={isNight}>
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
@@ -82,7 +86,8 @@ export default function Home(props) {
                 abbreviation={timeData.abbreviation}
                 city={locationData.city}
                 region={locationData.region_code}
-                isNight={isNightToggle}
+                isNight={isNight}
+                toggleNightMode={toggleNightMode(setIsNight)}
               />
               <MoreButton
                 morePanelShowing={morePanelShowing}
@@ -94,14 +99,14 @@ export default function Home(props) {
           </MaxWidth>
 
           <BottomThird>
-            <Glassy isNight={isNightToggle}>
+            <Glassy isNight={isNight}>
               <MaxWidth>
                 <MorePanel
                   timezone={timeData.timezone}
                   day_of_year={timeData.day_of_year}
                   day_of_week={timeData.day_of_week}
                   week_number={timeData.week_number}
-                  isNight={isNightToggle}
+                  isNight={isNight}
                 />
               </MaxWidth>
             </Glassy>
@@ -116,6 +121,14 @@ function toggleMorePanelShowing(setShowing) {
   return function (showing) {
     return function () {
       setShowing(!showing);
+    };
+  };
+}
+
+function toggleNightMode(setIsNight) {
+  return function (isNight) {
+    return function () {
+      setIsNight(!isNight);
     };
   };
 }

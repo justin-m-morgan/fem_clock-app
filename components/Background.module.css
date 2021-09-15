@@ -1,43 +1,22 @@
 .background {
-  --bg-desktop__daytime: url('/assets/desktop/bg-image-daytime.jpg');
-  --bg-desktop__nighttime: url('/assets/desktop/bg-image-nighttime.jpg');
-  --bg-mobile__daytime: url('/assets/mobile/bg-image-daytime.jpg');
-  --bg-mobile__nighttime: url('/assets/mobile/bg-image-nighttime.jpg');
-  --bg-tablet__daytime: url('/assets/tablet/bg-image-daytime.jpg');
-  --bg-tablet__nighttime: url('/assets/tablet/bg-image-nighttime.jpg');
-  --bg-overlay__day: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-  --bg-overlay__night: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
-}
-
-.background {
   width: 100vw;
   height: 100vh;
-  background-image:var(--bg-overlay__day), var(--bg-mobile__daytime);
+  background-image: var(--theme__overlay), var(--bg-mobile);
   background-size: cover;
   background-position: center;
   position: relative;
   overflow:hidden;
 }
 
-.background.night {
-  background-image:var(--bg-overlay__night), var(--bg-mobile__nighttime);
-}
-
 
 @media (min-width: 450px) {
   .background {
-    background-image: var(--bg-overlay__day), var(--bg-tablet__daytime);
-  }
-  .background.night {
-    background-image:var(--bg-overlay__night), var(--bg-tablet__nighttime);
+    background-image: var(--theme__overlay), var(--bg-tablet);
   }
 }
 
 @media (min-width: 900px) {
   .background {
-    background-image: var(--bg-overlay__day), var(--bg-desktop__daytime);
-  }
-  .background.night  {
-    background-image:var(--bg-overlay__night), var(--bg-desktop__nighttime);
+    background-image: var(--theme__overlay), var(--bg-desktop);
   }
 }

@@ -7,7 +7,7 @@ export function parseDateString(datetime){
     return false;
 }
 
-export function isNight(date) {
+export function isNightCheck(date) {
   if (date instanceof Date) {
     let hours = date.getHours();
     return hours >= 18;

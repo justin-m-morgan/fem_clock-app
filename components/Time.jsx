@@ -13,10 +13,15 @@ export default function TimeDisplay({
   city,
   region,
   isNight,
+  toggleNightMode,
 }) {
   return (
     <div className={styles.container}>
-      <Greeting datetime={datetime} isNight={isNight} />
+      <Greeting
+        datetime={datetime}
+        isNight={isNight}
+        toggleNightMode={toggleNightMode(isNight)}
+      />
       <Time datetime={datetime} abbreviation={abbreviation} />
       <Location city={city} region={region} />
     </div>
@@ -40,14 +45,13 @@ function AbbreviatedTZ({ abbreviation }) {
   );
 }
 
-function Greeting({ datetime, isNight }) {
+function Greeting({ datetime, isNight, toggleNightMode }) {
   return (
     <div className={styles.greeting__container}>
-      {isNight ? <IconMoon /> : <IconSun />}
-      {/* <img
-        src={isNightImageSrcToggle(isNight)}
-        alt={isNightImageAltToggle(isNight)}
-      /> */}
+      <button onClick={toggleNightMode}>
+        {isNight ? <IconMoon /> : <IconSun />}
+      </button>
+
       <h4 className={styles.greeting__text}>
         {greeting(datetime)}
         <span className={styles.greeting__text__hide}>, It's Currently</span>

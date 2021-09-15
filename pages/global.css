@@ -19,14 +19,21 @@
   --theme__text-contrast: var(--color__black);
   --theme__text-contrast--faded: var(--color__dark-grey);
   --theme__bg: var(--color__white), 0.7;
-  --theme__overlay: var(--color__black), 0.6;
+  --theme__overlay: linear-gradient(rgba(var(--color__black), 0.6), rgba(var(--color__black), 0.6));
+  --bg-desktop: url('/assets/desktop/bg-image-daytime.jpg');
+  --bg-mobile: url('/assets/mobile/bg-image-daytime.jpg');
+  --bg-tablet: url('/assets/tablet/bg-image-daytime.jpg');
+
 }
 
 [data-theme='dark'] {
   --theme__text-primary: var(--color__white);
   --theme__text-faded: var(--color__light-grey);
   --theme__bg: var(--color__black), 0.7;
-  --theme__overlay: var(--color__black), 0.9;
+  --theme__overlay: linear-gradient(rgba(var(--color__black), 0.4), rgba(var(--color__black), 0.4));
+  --bg-desktop: url('/assets/desktop/bg-image-nighttime.jpg');
+  --bg-mobile: url('/assets/mobile/bg-image-nighttime.jpg');
+  --bg-tablet: url('/assets/tablet/bg-image-nighttime.jpg');
 }
 
 html {

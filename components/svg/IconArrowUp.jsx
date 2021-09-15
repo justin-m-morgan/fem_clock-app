@@ -7,7 +7,7 @@ export default function IconArrowUp({ className }) {
     >
       <g fill="none" fillRule="evenodd">
         <circle fill="#303030" cx="20" cy="20" r="20" />
-        <path stroke="#FFF" stroke-width="2" d="M14 23l6-6 6 6" />
+        <path stroke="#FFF" strokeWidth="2" d="M14 23l6-6 6 6" />
       </g>
     </svg>
   );
