@@ -16,9 +16,8 @@
 }
 
 .quote__refreshbutton > svg {
-    width: 24px;
-    height: 24px;
-
+    height: 16px;
+    padding-right: 5px;
 }
 
 .quote__refreshbutton:hover > svg {
