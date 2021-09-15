@@ -15,12 +15,14 @@
   cursor: pointer;
 }
 
-.button > img {
+.button > svg {
+  height: 40px;
   transform: rotate(180deg) scale(0.92);
   transform-origin: center;
   transition: transform 500ms;
 }
-.button > img.rotate_half {
+.button > svg.rotate_half {
+
   transform: scale(0.92);
 }
 

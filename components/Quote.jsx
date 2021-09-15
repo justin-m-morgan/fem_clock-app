@@ -1,5 +1,6 @@
 import { TextBlock } from "./ui/TextBlock";
 import styles from "./Quote.module.css";
+import IconRefresh from "./svg/IconRefresh";
 
 export default function Quote({ quoteData, refetch }) {
   return (
@@ -34,7 +35,8 @@ function QuoteAuthor({ textContent }) {
 function CycleQuotesButton({ refetch }) {
   return (
     <button onClick={refetch} className={styles.quote__refreshbutton}>
-      <img src="/assets/icons/icon-refresh.svg" alt="Refresh" />
+      <IconRefresh />
+      {/* <img src="/assets/icons/icon-refresh.svg" alt="Refresh" /> */}
     </button>
   );
 }

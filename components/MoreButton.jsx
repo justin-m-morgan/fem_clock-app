@@ -1,7 +1,6 @@
 import classNames from "classnames"
 import styles from "./MoreButton.module.css"
-
-
+import IconArrowUp from "./svg/IconArrowUp";
 
 export default function MoreButton({
   morePanelShowing,
@@ -27,10 +26,7 @@ export default function MoreButton({
         >
           Less
         </span>
-
-        <img
-          src="./assets/icons/icon-arrow-up.svg"
-          alt="Arrow Icon"
+        <IconArrowUp
           className={classNames({
             [`${styles.rotate_half}`]: morePanelShowing,
           })}

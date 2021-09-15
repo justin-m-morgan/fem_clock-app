@@ -1,6 +1,8 @@
 import classNames from "classnames";
 import { parseDateString } from "../data/datetimes";
 import styles from "./Time.module.css";
+import IconMoon from "./svg/IconMoon";
+import IconSun from "./svg/IconSun";
 
 const dayIconUrl = "./assets/icons/icon-sun.svg";
 const nightIconUrl = "./assets/icons/icon-moon.svg";
@@ -41,10 +43,11 @@ function AbbreviatedTZ({ abbreviation }) {
 function Greeting({ datetime, isNight }) {
   return (
     <div className={styles.greeting__container}>
-      <img
+      {isNight ? <IconMoon /> : <IconSun />}
+      {/* <img
         src={isNightImageSrcToggle(isNight)}
         alt={isNightImageAltToggle(isNight)}
-      />
+      /> */}
       <h4 className={styles.greeting__text}>
         {greeting(datetime)}
         <span className={styles.greeting__text__hide}>, It's Currently</span>
