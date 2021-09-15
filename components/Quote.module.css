@@ -4,7 +4,7 @@
 
 .quote__container {
     display: grid;
-    grid-template-columns: 1fr 32px;
+    grid-template-columns: 1fr 48px;
     justify-content: space-between;
     align-items:start;
     max-width: 40ch;
@@ -29,7 +29,6 @@
 @media (min-width: 450px) {
   .quote__container {
     max-width: 38.75rem;
-    grid-template-columns: 1fr 48px;
   }
   .quote__refreshbutton > svg {
     width: 32px;
