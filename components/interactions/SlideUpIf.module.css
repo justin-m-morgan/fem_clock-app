@@ -1,13 +1,17 @@
 .base {
     transition: transform 500ms;
-    transform: translateY(0);
+    transform: translateY(6vh);
 }
 
 .slide {
     transform: translateY(-33vh);
 }
 
-
+@media (min-width: 900px) {
+  .base {
+    transform: translateY(0);
+}
+}
 
 
 @media (min-width: 900px) {
