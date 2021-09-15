@@ -1,9 +1,5 @@
 .container {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(var(--theme__bg));
   backdrop-filter: blur(8px);
   height: 250%;
-}
-
-.container.night {
-  background-color: rgba(0, 0, 0, 0.7);
 }

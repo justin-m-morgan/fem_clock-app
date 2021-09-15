@@ -1,4 +1,3 @@
-import { TextBlock } from "./ui/TextBlock";
 import styles from "./Quote.module.css";
 import IconRefresh from "./svg/IconRefresh";
 
@@ -7,7 +6,7 @@ export default function Quote({ quoteData, refetch }) {
     <div className={styles.quote}>
       {ifAllAccessedPropsPresent(quoteData) ? (
         <div className={styles.quote__container}>
-          <div className={styles.quote__text}>
+          <div>
             <QuoteText textContent={quoteData.content} />
             <QuoteAuthor textContent={quoteData.author} />
           </div>
@@ -25,11 +24,11 @@ function ifAllAccessedPropsPresent(quoteData) {
 }
 
 function QuoteText({ textContent }) {
-  return <TextBlock>"{textContent}"</TextBlock>;
+  return <p className={styles.quote__text}>"{textContent}"</p>;
 }
 
 function QuoteAuthor({ textContent }) {
-  return <h3 className="h5">{textContent}</h3>;
+  return <h3 className={styles.quote__author}>{textContent}</h3>;
 }
 
 function CycleQuotesButton({ refetch }) {

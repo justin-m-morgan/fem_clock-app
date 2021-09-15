@@ -1,20 +1,9 @@
 .container {
-    --datalist__grey: rgba(100, 100, 100, 0.8);
     padding: 3rem 0;
     min-height: 30vh;
 }
-.container.night {
-  --datalist__grey: rgba(240, 240, 240, 0.8);
-}
-.container.night .datalist dt {
-  color: var(--datalist__grey);
-}
-.container.night .datalist dd {
-  color: var(--color__white);
-}
 
 .datalist {
-
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 1rem;
@@ -35,10 +24,10 @@
     font-weight: 500;
     letter-spacing: 0.125rem;
     text-transform: uppercase;
-    color: var(--datalist__grey);
+    color: rgb(var(--theme__text-contrast--faded));
 }
 .datalist dd {
-    color: var(--color__black);
+  color: rgb(var(--theme__text-contrast));
     font-size: 1.2rem;
     text-align: right;
 

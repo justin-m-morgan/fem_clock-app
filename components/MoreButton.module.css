@@ -10,8 +10,8 @@
   align-items: center;
   padding: 0.1rem 0.13rem;
   border-radius: 32px;
-  color: var(--color__grey);
-  background-color: var(--color__white);
+  color: rgb(var(--color__dark-grey));
+  background-color: rgba(var(--color__white));
   cursor: pointer;
 }
 
@@ -29,7 +29,7 @@
 .text {
   grid-column-start: 1;
   grid-row-start: 1;
-  color: var(--color__grey);
+  color: rgb(var(--color__grey));
   display: inline-block;
   padding: 0 0.5rem 0 1rem;
   text-transform: uppercase;
