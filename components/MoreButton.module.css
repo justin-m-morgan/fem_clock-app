@@ -8,7 +8,7 @@
   grid-template-columns: 2fr 1fr;
   justify-content: space-between;
   align-items: center;
-  padding: 0.1rem 0.13rem;
+  padding: 0.1rem 0.2rem;
   border-radius: 32px;
   color: rgb(var(--color__dark-grey));
   background-color: rgba(var(--color__white));
