@@ -33,7 +33,11 @@ function QuoteAuthor({ textContent }) {
 
 function CycleQuotesButton({ refetch }) {
   return (
-    <button onClick={refetch} className={styles.quote__refreshbutton}>
+    <button
+      onClick={refetch}
+      className={styles.quote__refreshbutton}
+      aria-label="Cycle quote"
+    >
       <IconRefresh />
       {/* <img src="/assets/icons/icon-refresh.svg" alt="Refresh" /> */}
     </button>

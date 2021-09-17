@@ -48,7 +48,7 @@ function AbbreviatedTZ({ abbreviation }) {
 function Greeting({ datetime, isNight, toggleNightMode }) {
   return (
     <div className={styles.greeting__container}>
-      <button onClick={toggleNightMode}>
+      <button onClick={toggleNightMode} aria-label="Toggle Night Mode">
         {isNight ? <IconMoon /> : <IconSun />}
       </button>
 
@@ -60,12 +60,6 @@ function Greeting({ datetime, isNight, toggleNightMode }) {
   );
 }
 
-function isNightImageSrcToggle(isNight) {
-  return isNight ? nightIconUrl : dayIconUrl;
-}
-function isNightImageAltToggle(isNight) {
-  return isNight ? "Moon" : "Sun";
-}
 
 function Location({ city, region }) {
   return (
